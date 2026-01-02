@@ -8,8 +8,9 @@ import { ROICalculator } from "@/components/calculators/ROICalculator"
 import { ArrowLeft, Check, Download, MapPin } from "lucide-react"
 
 // Dummy data fetching simulation
-const getProject = (slug: string) => {
-    // In a real app, fetch from CMS/DB
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const getProject = (_slug: string) => {
+    // In a real app, fetch from CMS/DB using slug
     return {
         title: "Magnum Resort Berawa",
         location: "Berawa, North Kuta",

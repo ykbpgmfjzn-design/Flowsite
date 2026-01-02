@@ -1,4 +1,4 @@
-import { ProjectsGrid } from "@/components/projects/ProjectsGrid"
+
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
