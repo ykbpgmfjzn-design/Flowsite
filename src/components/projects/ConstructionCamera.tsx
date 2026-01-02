@@ -9,7 +9,8 @@ interface ConstructionCameraProps {
     status: string;
 }
 
-export function ConstructionCamera({ streamUrl, location, status }: ConstructionCameraProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function ConstructionCamera({ streamUrl, location, status: _status }: ConstructionCameraProps) {
     return (
         <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-white/10">
 

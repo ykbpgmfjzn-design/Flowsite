@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ProjectCard, ProjectData } from "./ProjectCard"
 import { Button } from "@/components/ui/button"
-import { Filter, X } from "lucide-react"
+import { Filter } from "lucide-react"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Slider } from "@/components/ui/slider"
 import { Badge } from "@/components/ui/badge"
