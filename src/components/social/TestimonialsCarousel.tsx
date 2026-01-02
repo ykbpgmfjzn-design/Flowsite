@@ -85,7 +85,7 @@ export function TestimonialsCarousel() {
                         </div>
 
                         <p className="text-gray-300 leading-relaxed italic">
-                            "{t.text}"
+                            &ldquo;{t.text}&rdquo;
                         </p>
                     </Card>
                 ))}
