@@ -1,0 +1,37 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filter for contrast on any background - doesn't change shape -->
+    <filter id="contrast" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- White outline for dark backgrounds -->
+      <feMorphology operator="dilate" radius="0.5" in="SourceAlpha" result="thick"/>
+      <feFlood flood-color="white" flood-opacity="0.9"/>
+      <feComposite in2="thick" operator="in"/>
+      <feGaussianBlur stdDeviation="1" result="whiteGlow"/>
+      
+      <!-- Black outline for light backgrounds -->
+      <feMorphology operator="dilate" radius="0.5" in="SourceAlpha" result="thick2"/>
+      <feFlood flood-color="black" flood-opacity="0.7"/>
+      <feComposite in2="thick2" operator="in"/>
+      <feGaussianBlur stdDeviation="1" result="blackGlow"/>
+      
+      <!-- Combine both -->
+      <feMerge>
+        <feMergeNode in="blackGlow"/>
+        <feMergeNode in="whiteGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- MAGNUM text - exact form preserved: large, bold, uppercase sans-serif -->
+  <text x="150" y="50" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
+        text-anchor="middle" fill="currentColor" letter-spacing="2" filter="url(#contrast)">
+    MAGNUM
+  </text>
+  
+  <!-- ESTATE text - exact form preserved: smaller, thinner, wider spacing -->
+  <text x="150" y="85" font-family="Arial, sans-serif" font-size="24" font-weight="300" 
+        text-anchor="middle" fill="currentColor" letter-spacing="6" filter="url(#contrast)">
+    ESTATE
+  </text>
+</svg>
